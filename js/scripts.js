@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector ('.desktop-menu');
 const burgerMobile = document.querySelector ('.menu');
 const mobileMenu = document.querySelector ('.mobile-menu');
 const btnCart = document.querySelector ('.navbar-shopping-cart');
-const cart = document.querySelector ('.product-detail');
+const cart = document.querySelector ('#shoppingCartContainer');
 const cartContainer = document.querySelector ('.cards-container');
 
 navEmail.addEventListener('click', toggleDesktopMenu);
@@ -22,7 +22,6 @@ function toggleDesktopMenu () {
 }
 
 //Funtions for the mobile menu togglingAction
-
 function toggleMobileMenu () {
     const isCartClosed = cart.classList.contains('inactive');
 
@@ -32,7 +31,6 @@ function toggleMobileMenu () {
 
     mobileMenu.classList.toggle('inactive');
 }
-
 function toggleProductDetail () {
     
     const isMobileMenuclosed = mobileMenu.classList.contains('inactive');
@@ -47,33 +45,22 @@ function toggleProductDetail () {
 }
 
 // Productos
-
 const productList = [];
-
 productList.push({
     name: 'Bike',
     precio: '120',
     img: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
-
 productList.push({
     name: 'Pantalla',
     precio: '220',
     img: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
-
 productList.push({
     name: 'Computador',
     precio: '320',
     img: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
-
-productList.push({
-    name: 'Computador',
-    precio: '320',
-    img: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
-
 function renderProducts (array) {
     for (product of array) {
         const productCard = document.createElement('div');
@@ -106,5 +93,5 @@ function renderProducts (array) {
         cartContainer.appendChild(productCard);
     };
 }
-
 renderProducts(productList);
+
