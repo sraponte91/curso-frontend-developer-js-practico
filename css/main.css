@@ -146,9 +146,11 @@
 
   .mobile-menu {
     position: absolute;
-    padding: 24px;
+    padding-left: 24px;
     background: var(--white);
+    width: calc(100% - 24px);
     top: 61px;
+    left: 0;
   }
   .mobile-menu a {
     text-decoration: none;
@@ -180,11 +182,14 @@
 
   aside {
     width: 360px;
-    padding: 24px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
     box-shadow: #000000;
+  }
+
+  #shoppingCartContainer {
+    padding: 0 24px;
   }
   .title-container {
     display: flex;
